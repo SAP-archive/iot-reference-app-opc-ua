@@ -1,0 +1,16 @@
+1. See Node.js version : node -v  (in our case v6.9.2)
+
+2. Create a new folder called firmware, change directory (obsolete: and create a new Node.js app inside with : npm init using all of the defaults)
+
+4. Using Filezilla move the latest firmware folder contents from [firmware](../../Nodejs/node-firmware) to the firmware folder
+
+3. Do an npm install to install all required packages (obsolete: Install Intel mraa Node.js package in proj : npm install mraa)
+
+4. Download and test examples from in the app (optional):
+
+   https://github.com/intel-iot-devkit/mraa/tree/master/examples/javascript
+
+4. Run test scripts (optional)
+
+   node Blink-IO.js
+   node AioA0.js

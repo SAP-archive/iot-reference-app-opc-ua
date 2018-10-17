@@ -1,0 +1,36 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:iot="sap.ui.iot.controls" xmlns:iotele="sap.ui.iot.elements" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="KM.controller.Main" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="Kettel Monitor" backgroundDesign="Solid" showFooter="false">
+				<content>
+					<HBox width="100%" height="100%" id="__hbox0">
+						<items>
+							<VBox width="30%" direction="Column" id="__vbox0">
+							    <items>
+							        <iot:IoTThingList id="__list4" things="{path:'/Things',parameters:{expand:'HierarchyElements,DYN_ENT_ref_apps_kettle__Image,DYN_ENT_ref_apps_kettle__Default,DYN_ENT_ref_apps_kettle__ConsumedPower,DYN_ENT_com_sap_appiot_eventtypes__StandardEventType'}}" rowSelect="action" action:wiring="\{'rowSelect':\{'targets':[\{'id':'__tchart0','action':'doReload','parameters':\{'context':'thing'\}\}]\}\}">
+							            <iot:columns>
+							                <iotele:IoTThingListColumnHeader text="Kettle ID" id="__header0"/>
+							                <iotele:IoTThingListColumnHeader text="Name" id="__header1"/>
+							                <iotele:IoTThingListColumnHeader text="Phase 1" id="__header2"/></iot:columns>
+							            <iot:things>
+							                <iotele:IoTThingListElement id="__element0">
+							                    <iotele:cells>
+							                        <iotele:IoTThingListColumn text="{ThingId}" id="__column6"/>
+							                        <iotele:IoTThingListColumn text="{ThingName}" id="__column7"/>
+							                        <iotele:IoTThingListColumn text="{DYN_ENT_ref_apps_kettle__ConsumedPower/ConsumedPower.CurrentPhase2}" id="__column8"/></iotele:cells>
+							                </iotele:IoTThingListElement>
+							            </iot:things></iot:IoTThingList>
+							    </items>
+							</VBox>
+							<VBox width="70%" direction="Column" id="__vbox1">
+							    <items>
+							        <iot:IoTChart id="__tchart0" headerTitle="Consumed Power" subheaderTitle="Amperes" noOfHours="168"/>
+							    </items>
+							</VBox>
+						</items>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

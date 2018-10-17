@@ -1,0 +1,211 @@
+<?xml version="1.0" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+		xmlns:sap="http://www.sap.com/Protocols/SAPData">
+		<Schema Namespace="com.sap.appiot" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="DYN_ENT_ref_apps_kettle__Image">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Image.ImageName" Type="Edm.String"></Property>
+				<Property Name="Image.ImageName.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_ref_apps_kettle__Default">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Default.SerialNumber" Type="Edm.String"></Property>
+				<Property Name="Default.SerialNumber.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="Thing">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false">
+					<Documentation>
+						<LongDescription>Thing unique ID</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingISOCode" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing Language code</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing description</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingName" Type="Edm.String" Nullable="false">
+					<Documentation>
+						<LongDescription>Thing name</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingExternalId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing external id</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingType" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing Type ID associated with the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ObjectGroup" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Object group used to create the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPName" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Business partner name associated for the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPLandlinePhoneNumber" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Landline phone number of Business partner</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPMobilePhoneNumber" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Mobile phone number of Business partner</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCustomerId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Business partner ID associated for the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingRegionDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Region where Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCountryDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Country where the Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCountryId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Country code where the Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCommunicationData" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing address details</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingLocationId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing location ID</LongDescription>
+					</Documentation>
+				</Property>
+				<NavigationProperty Name="DYN_ENT_ref_apps_kettle__Default" Relationship="com.sap.appiot.DYN_ENT_ref_apps_kettle__Default"
+					FromRole="ThingEntities" ToRole="DYN_ENT_ref_apps_kettle__DefaultEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_ref_apps_kettle__ConsumedPower" Relationship="com.sap.appiot.DYN_ENT_ref_apps_kettle__ConsumedPower"
+					FromRole="ThingEntities" ToRole="DYN_ENT_ref_apps_kettle__ConsumedPowerEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_ref_apps_kettle__Image" Relationship="com.sap.appiot.DYN_ENT_ref_apps_kettle__Image"
+					FromRole="ThingEntities" ToRole="DYN_ENT_ref_apps_kettle__ImageEntities"></NavigationProperty>
+			</EntityType>
+			<EntityType Name="DYN_ENT_ref_apps_kettle__ConsumedPower" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="ConsumedPower.Current" Type="Edm.Double"></Property>
+				<Property Name="ConsumedPower.Current.UpperUpperThreshold8181." Type="Edm.Double" AttributeType="com.sap.iot.core.UpperUpperThreshold"></Property>
+				<Property Name="ConsumedPower.Current.UpperThreshold3221." Type="Edm.Double" AttributeType="com.sap.iot.core.UpperThreshold"></Property>
+				<Property Name="ConsumedPower.Current.LowerThreshold54106" Type="Edm.Double" AttributeType="com.sap.iot.core.LowerThreshold"></Property>
+				<Property Name="ConsumedPower.Current.LowLowerThreshold66479" Type="Edm.Double" AttributeType="com.sap.iot.core.LowLowerThreshold"></Property>
+				<Property Name="ConsumedPower.Current.UoM45483" Type="Edm.String" AttributeType="com.sap.iot.core.UoM"></Property>
+				<Property Name="ConsumedPower.Current.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Current.LowerThreshold54106.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Current.LowLowerThreshold66479.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Current.UoM45483.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Current.UpperUpperThreshold8181..Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Current.UpperThreshold3221..Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1" Type="Edm.Double"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.LowLowerThreshold64730" Type="Edm.Double" AttributeType="com.sap.iot.core.LowLowerThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.LowerThreshold13295" Type="Edm.Double" AttributeType="com.sap.iot.core.LowerThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.UpperThreshold35011" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.UpperUpperThreshold20661" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperUpperThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.UoM48365" Type="Edm.String" AttributeType="com.sap.iot.core.UoM"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.UoM48365.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.UpperUpperThreshold20661.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.UpperThreshold35011.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.LowerThreshold13295.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase1.LowLowerThreshold64730.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2" Type="Edm.Double"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.LowLowerThreshold64426" Type="Edm.Double" AttributeType="com.sap.iot.core.LowLowerThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.LowerThreshold93315" Type="Edm.Double" AttributeType="com.sap.iot.core.LowerThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.UpperThreshold58967" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.UoM96826" Type="Edm.String" AttributeType="com.sap.iot.core.UoM"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.UpperUpperThreshold24959" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperUpperThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.UoM96826.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.UpperUpperThreshold24959.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.UpperThreshold58967.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.LowerThreshold93315.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase2.LowLowerThreshold64426.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3" Type="Edm.Double"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.UpperUpperThreshold19291" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperUpperThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.UpperThreshold42267" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.LowerThreshold44724" Type="Edm.Double" AttributeType="com.sap.iot.core.LowerThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.LowLowerThreshold38031" Type="Edm.Double" AttributeType="com.sap.iot.core.LowLowerThreshold"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.UoM38156" Type="Edm.String" AttributeType="com.sap.iot.core.UoM"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.UoM38156.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.UpperUpperThreshold19291.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.UpperThreshold42267.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.LowerThreshold44724.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.CurrentPhase3.LowLowerThreshold38031.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Voltage" Type="Edm.Double"></Property>
+				<Property Name="ConsumedPower.Voltage.UoM50594" Type="Edm.String" AttributeType="com.sap.iot.core.UoM"></Property>
+				<Property Name="ConsumedPower.Voltage.UpperUpperThreshold99322" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperUpperThreshold"></Property>
+				<Property Name="ConsumedPower.Voltage.UpperThreshold85523" Type="Edm.Double" AttributeType="com.sap.iot.core.UpperThreshold"></Property>
+				<Property Name="ConsumedPower.Voltage.LowerThreshold60966" Type="Edm.Double" AttributeType="com.sap.iot.core.LowerThreshold"></Property>
+				<Property Name="ConsumedPower.Voltage.LowLowerThreshold61713" Type="Edm.Double" AttributeType="com.sap.iot.core.LowLowerThreshold"></Property>
+				<Property Name="ConsumedPower.Voltage.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Voltage.UoM50594.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Voltage.LowLowerThreshold61713.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Voltage.UpperUpperThreshold99322.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Voltage.UpperThreshold85523.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="ConsumedPower.Voltage.LowerThreshold60966.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<Association Name="DYN_ENT_ref_apps_kettle__Default">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_ref_apps_kettle__Default" Multiplicity="1" Role="DYN_ENT_ref_apps_kettle__DefaultEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_ref_apps_kettle__ConsumedPower">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_ref_apps_kettle__ConsumedPower" Multiplicity="1" Role="DYN_ENT_ref_apps_kettle__ConsumedPowerEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_ref_apps_kettle__Image">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_ref_apps_kettle__Image" Multiplicity="1" Role="DYN_ENT_ref_apps_kettle__ImageEntities"></End>
+			</Association>
+			<EntityContainer Name="CompositeThingsThingType" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="DYN_ENT_ref_apps_kettle__Images" EntityType="com.sap.appiot.DYN_ENT_ref_apps_kettle__Image"></EntitySet>
+				<EntitySet Name="DYN_ENT_ref_apps_kettle__Defaults" EntityType="com.sap.appiot.DYN_ENT_ref_apps_kettle__Default"></EntitySet>
+				<EntitySet Name="Things" EntityType="com.sap.appiot.Thing"></EntitySet>
+				<EntitySet Name="DYN_ENT_ref_apps_kettle__ConsumedPowers" EntityType="com.sap.appiot.DYN_ENT_ref_apps_kettle__ConsumedPower"></EntitySet>
+				<AssociationSet Name="DYN_ENT_ref_apps_kettle__Default" Association="com.sap.appiot.DYN_ENT_ref_apps_kettle__Default">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_ref_apps_kettle__Defaults" Role="DYN_ENT_ref_apps_kettle__DefaultEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_ref_apps_kettle__ConsumedPower" Association="com.sap.appiot.DYN_ENT_ref_apps_kettle__ConsumedPower">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_ref_apps_kettle__ConsumedPowers" Role="DYN_ENT_ref_apps_kettle__ConsumedPowerEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_ref_apps_kettle__Image" Association="com.sap.appiot.DYN_ENT_ref_apps_kettle__Image">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_ref_apps_kettle__Images" Role="DYN_ENT_ref_apps_kettle__ImageEntities"></End>
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,32 @@
+{
+    "simulation": false,
+    "opcUAServerEndpoint" : "opc.tcp://10.94.17.26:4334/",
+    "defaultSensorReadFrequency" : 1000,
+    "defaultConfigReadFrequency" : 10000,
+    "deviceNodeId" : "ns=1;1000",
+    "deviceNodeName" : "thecontroller51",
+    "deviceConfigNodeId" : "ns=1;i=1005",
+    "deviceSensors" :[
+        {
+            "sensorNodeId" : "ns=1;i=1006",
+            "sensorNodeName" : "CurrentPhase1",
+            "analogPort" : 1,
+            "lastValue" : 0,
+            "lastValueTimestamp" : ""
+        },
+        {
+            "sensorNodeId" : "ns=1;i=1021",
+            "sensorNodeName" : "CurrentPhase2",
+            "analogPort" : 2,
+            "lastValue" : 0,
+            "lastValueTimestamp" : ""
+        },
+        {
+            "sensorNodeId" : "ns=1;i=1036",
+            "sensorNodeName" : "CurrentPhase3",
+            "analogPort" : 3,
+            "lastValue" : 0,
+            "lastValueTimestamp" : ""
+        }
+    ]
+}

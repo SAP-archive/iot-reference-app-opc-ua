@@ -1,0 +1,65 @@
+{
+  "readWriteTimeInterval": 1000,
+  "endpointMQTT": "tcp://127.0.0.1:61618",
+  "endpointUrlOPCUA": "opc.tcp://10.94.17.26:4334/",
+  "devicesAndSensorIds": [
+      {
+        "deviceId": "device51",
+        "sensors" : [
+          {
+            "sensorOpcUaNodeId": "ns=1;i=1006",
+            "sensorOpcUaNodeName": "L1",
+            "sensorAlternateId": "device51s",
+            "sensorTypeAlternateId": "123",
+            "capabilityId": "ConsumedPowerb"
+          },
+          {
+            "sensorOpcUaNodeId": "ns=1;i=1021",
+            "sensorOpcUaNodeName": "L2",
+            "sensorAlternateId": "device51s",
+            "sensorTypeAlternateId": "123",
+            "capabilityId": "ConsumedPowerb"
+          },
+          {
+            "sensorOpcUaNodeId": "ns=1;i=1036",
+            "sensorOpcUaNodeName": "L3",
+            "sensorAlternateId": "device51s",
+            "sensorTypeAlternateId": "123",
+            "capabilityId": "ConsumedPowerb"
+          }
+        ]
+      },
+      {
+        "deviceId": "testControllerForTest1",
+        "sensors" : [
+          {
+            "sensorOpcUaNodeId": "ns=1;i=1053",
+            "sensorOpcUaNodeName": "L1",
+            "sensorAlternateId": "sensorForTestControllerForTest1",
+            "sensorTypeAlternateId": "123",
+            "capabilityId": "ConsumedPowerb"
+          },
+          {
+            "sensorOpcUaNodeId": "ns=1;i=1068",
+            "sensorOpcUaNodeName": "L2",
+            "sensorAlternateId": "sensorForTestControllerForTest1",
+            "sensorTypeAlternateId": "123",
+            "capabilityId": "ConsumedPowerb"
+          },
+          {
+            "sensorOpcUaNodeId": "ns=1;i=1083",
+            "sensorOpcUaNodeName": "L3",
+            "sensorAlternateId": "sensorForTestControllerForTest1",
+            "sensorTypeAlternateId": "123",
+            "capabilityId": "ConsumedPowerb"
+          }
+        ]
+      }
+  ],
+  "devicesWithCommands": [
+    {
+      "deviceId": 75,
+      "deviceAlternateId": "device51"
+    }
+  ]
+}

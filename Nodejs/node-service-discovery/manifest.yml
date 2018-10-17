@@ -1,0 +1,5 @@
+applications:
+ - name: node-service-discovery
+   memory: 64M
+   disk_quota: 128M
+   instances: 1

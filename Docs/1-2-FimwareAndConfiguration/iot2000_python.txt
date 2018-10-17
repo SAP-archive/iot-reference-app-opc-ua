@@ -1,0 +1,8 @@
+1. Download and test examples from in the app :
+
+   https://github.com/intel-iot-devkit/mraa/tree/master/examples/python
+
+4. Run example scripts :
+
+   python blink-io8.py
+   python aio.py

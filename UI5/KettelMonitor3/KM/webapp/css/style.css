@@ -1,0 +1,6 @@
+html.sap-phone body .sapUiResponsiveSplitter>.sapUiResponsiveSplitterPage>.sapUiLoSplitter .sapUiLoSplitterBar .sapUiLoSplitterBarIcon:after,
+html.sap-tablet body .sapUiResponsiveSplitter>.sapUiResponsiveSplitterPage>.sapUiLoSplitter .sapUiLoSplitterBar .sapUiLoSplitterBarIcon:after,
+html.sap-phone body .sapUiResponsiveSplitter>.sapUiResponsiveSplitterPage>.sapUiLoSplitter .sapUiLoSplitterOverlayBar .sapUiLoSplitterBarIcon:after,
+html.sap-tablet body .sapUiResponsiveSplitter>.sapUiResponsiveSplitterPage>.sapUiLoSplitter .sapUiLoSplitterOverlayBar .sapUiLoSplitterBarIcon:after {
+    content: none;
+}

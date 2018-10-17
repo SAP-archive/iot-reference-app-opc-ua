@@ -1,0 +1,12 @@
+Package manager : opkg (Yocto Linux)
+
+Command to see versions of Intel mraa & Intel upm packages :
+
+opkg info mraa
+opkg info upm
+
+Further info :
+
+https://github.com/intel-iot-devkit/mraa (chapter "Installing on Intel 32bit Yocto based opkg image")
+https://github.com/intel-iot-devkit/upm/blob/master/docs/installing.md (chapter "Installing UPM -> Poky Linux")
+http://upm.mraa.io/

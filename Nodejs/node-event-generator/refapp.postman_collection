@@ -1,0 +1,350 @@
+{
+	"variables": [],
+	"info": {
+		"name": "refapp",
+		"_postman_id": "ad744273-1ae9-b485-196d-4cd3f3164953",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create event",
+			"request": {
+				"url": "https://refapps.iot-sap.cfapps.eu10.hana.ondemand.com/appiot-mds/Events/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "{{x-csrf-token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_businessTimeStamp\": \"2018-02-07T06:38:51Z\",\n    \"_status\": \"Open\",\n    \"_type\": \"Alert\",\n    \"_severity\": 1,\n    \"_source\": \"node-event-generator\",\n    \"_code\": \"1\",\n    \"_thingId\": \"76757DFB166644E09BF8675271E6AA7D\",\n    \"_thingProperty\": \"ref.apps.kettle:thekettl/ConsumedPowerb/CurrentPhase1b_AVG\",\n    \"_description\": \"one phase broken\"\n}"
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "create event copy",
+			"request": {
+				"url": "https://refapps.iot-sap.cfapps.eu10.hana.ondemand.com/appiot-mds/Events/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "{{x-csrf-token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_businessTimeStamp\": \"2018-02-07T06:38:51Z\",\n    \"_status\": \"New\",\n    \"_type\": \"Alert\",\n    \"_severity\": 1,\n    \"_source\": \"node-event-generator\",\n    \"_code\": \"1\",\n    \"_thingId\": \"76757DFB166644E09BF8675271E6AA7D\",\n    \"_thingProperty\": \"ref.apps.kettle:thekettle/ConsumedPowerb/CurrentPhase1b_AVG\",\n    \"_description\": \"one phase broken\"\n}"
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "refapp get averages for 2 minutes",
+			"request": {
+				"url": {
+					"raw": "https://iotae-weather-station.flp-iot-sap.cfapps.eu10.hana.ondemand.com/appiot-mds/Things('3AF5E3037DFC4A1CB5AE5A7315E78F29')/iotae.weatherstation.greenhouse.mb:greenhouse_mb/status_capability_mb?timerange=2017-11-20T02:11:45.803Z-2017-11-20T06:37:29.708Z&$apply=sap.lineChart(divisions=200,property=%27humidity%27)",
+					"protocol": "https",
+					"host": [
+						"iotae-weather-station",
+						"flp-iot-sap",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"appiot-mds",
+						"Things('3AF5E3037DFC4A1CB5AE5A7315E78F29')",
+						"iotae.weatherstation.greenhouse.mb:greenhouse_mb",
+						"status_capability_mb"
+					],
+					"query": [
+						{
+							"key": "timerange",
+							"value": "2017-11-20T02:11:45.803Z-2017-11-20T06:37:29.708Z",
+							"equals": true
+						},
+						{
+							"key": "$apply",
+							"value": "sap.lineChart(divisions=200,property=%27humidity%27)",
+							"equals": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "sap-iot-loglevel",
+						"value": "DEBUG"
+					}
+				],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "get average",
+			"request": {
+				"url": {
+					"raw": "https://refapps.iot-sap.cfapps.eu10.hana.ondemand.com/analytics-thing-sap/ref.apps.kettle:ConsumedPowerb/aggregates?$select=id,CurrentPhase3b_AVG,CurrentPhase2b_AVG,CurrentPhase1b_AVG&$filter=time ge datetime'2018-02-07T06:38:51' and time lt datetime'2018-02-07T06:40:51'&$format=json",
+					"protocol": "https",
+					"host": [
+						"refapps",
+						"iot-sap",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"analytics-thing-sap",
+						"ref.apps.kettle:ConsumedPowerb",
+						"aggregates"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "id,CurrentPhase3b_AVG,CurrentPhase2b_AVG,CurrentPhase1b_AVG",
+							"equals": true
+						},
+						{
+							"key": "$filter",
+							"value": "time ge datetime'2018-02-07T06:38:51' and time lt datetime'2018-02-07T06:40:51'",
+							"equals": true
+						},
+						{
+							"key": "$format",
+							"value": "json",
+							"equals": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch csrf token for Event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"x-csrf-token\", responseHeaders[\"x-csrf-token\"]);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://{{tenant}}.{{endpoint}}/appiot-mds/Events",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "Fetch"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Read All Events",
+			"request": {
+				"url": "https://{{tenant}}.{{endpoint}}/appiot-mds/Events",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "get advnced thing list",
+			"request": {
+				"url": {
+					"raw": "https://webidetesting9910894-aae9c2f7b.dispatcher.hana.ondemand.com/IOTAS-ADVANCEDLIST-THING-ODATA/CompositeThings/v1/Things?$skip=0&$top=100&$expand=DYN_ENT_iotae_weatherstation_greenhouse_mb__status_capability_mb%2cDYN_ENT_com_sap_appiot_eventtypes__StandardEventType%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Default%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Image%2cHierarchyElements&$inlinecount=allpages",
+					"protocol": "https",
+					"host": [
+						"webidetesting9910894-aae9c2f7b",
+						"dispatcher",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"IOTAS-ADVANCEDLIST-THING-ODATA",
+						"CompositeThings",
+						"v1",
+						"Things"
+					],
+					"query": [
+						{
+							"key": "$skip",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "$top",
+							"value": "100",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "$expand",
+							"value": "DYN_ENT_iotae_weatherstation_greenhouse_mb__status_capability_mb%2cDYN_ENT_com_sap_appiot_eventtypes__StandardEventType%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Default%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Image%2cHierarchyElements",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "$inlinecount",
+							"value": "allpages",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "sap-iot-pst",
+						"value": "iotae.weatherstation.greenhouse.mb:Default,iotae.weatherstation.greenhouse.mb:Image,iotae.weatherstation.greenhouse.mb:status_capability_mb",
+						"description": ""
+					},
+					{
+						"key": "sap-iot-eventtype",
+						"value": "com.sap.appiot.eventtypes:StandardEventType",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get advnced thing list handson2",
+			"request": {
+				"url": {
+					"raw": "https://iotae-weather-station.iot-sap.cfapps.eu10.hana.ondemand.com/advancedlist-thing-sap/CompositeThings/v1/Things?$skip=0&$top=100&$expand=DYN_ENT_iotae_weatherstation_greenhouse_mb__status_capability_mb%2cDYN_ENT_com_sap_appiot_eventtypes__StandardEventType%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Default%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Image%2cHierarchyElements&$inlinecount=allpages",
+					"protocol": "https",
+					"host": [
+						"iotae-weather-station",
+						"iot-sap",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"advancedlist-thing-sap",
+						"CompositeThings",
+						"v1",
+						"Things"
+					],
+					"query": [
+						{
+							"key": "$skip",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "$top",
+							"value": "100",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "$expand",
+							"value": "DYN_ENT_iotae_weatherstation_greenhouse_mb__status_capability_mb%2cDYN_ENT_com_sap_appiot_eventtypes__StandardEventType%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Default%2cDYN_ENT_iotae_weatherstation_greenhouse_mb__Image%2cHierarchyElements",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "$inlinecount",
+							"value": "allpages",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "sap-iot-pst",
+						"value": "iotae.weatherstation.greenhouse.mb:Default,iotae.weatherstation.greenhouse.mb:Image,iotae.weatherstation.greenhouse.mb:status_capability_mb",
+						"description": ""
+					},
+					{
+						"key": "sap-iot-eventtype",
+						"value": "com.sap.appiot.eventtypes:StandardEventType",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

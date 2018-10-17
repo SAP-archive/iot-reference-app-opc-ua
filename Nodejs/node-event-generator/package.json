@@ -1,0 +1,17 @@
+{
+  "name": "node-event-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "iot-application-services-sdk-nodejs": "SAP/iot-application-services-sdk-nodejs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
