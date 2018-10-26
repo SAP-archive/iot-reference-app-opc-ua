@@ -1,6 +1,6 @@
 ## Device Firmware and Device Configuration
 
-We tried to avoid to build firmware ourselves as much as possible. What we had however to do is write code that reads from the current sensors. As the current sensor provide a reading that goes up and down with the alernating phase current we had to sample it 200 times and look for the max and the min.
+We tried to avoid to build firmware ourselves as much as possible. What we had to do however was to write code that reads from the current sensors. As the current sensor provide a reading that goes up and down with the alternating phase current we had to sample it 200 times and look for the max and the min.
 
 We learned this from the examples of the shield manufacturer and we got reasonable readings after some attempts.
 
@@ -10,4 +10,4 @@ Right now we have put our code and the opc ua server all into one process/applic
 
 We experimented with python and packages available on device (see files in this folder).
 
-The source of the firmware may be found here : [Firmware](../Nodejs/node-firmware)
+The source of the firmware may be found here : [Firmware](../../Nodejs/node-firmware)

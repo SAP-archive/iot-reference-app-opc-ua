@@ -1,11 +1,13 @@
 # Security
 
-## Identity Provider
-
 ## Authentication
 
-## Authorization
+tbd, central idp was used.
 
-## Handling password in the project
+## Authorisation
+
+tbd, central role management and instance based authorisations were used.
+
+## Handling passwords of devices in the project
 
 For the siemens device and the pi gateway we used root and pi user respectively. We used the same password for all of these that was shared verbally in our project team.

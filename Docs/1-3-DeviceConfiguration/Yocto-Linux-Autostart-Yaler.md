@@ -1,9 +1,9 @@
 ## Why we need Yaler tunnel
 
     We need a secure SSH tunnel over the Internet to access the device remotely.
-    This script alos makes sure to updte the time on the device and to reboot the device once a day (one never knows which process might have a memory leak when aon these operating systems).
+    This script also makes sure to update the time on the device and to reboot the device once a day (one never knows which process might have a memory leak when on these operating systems).
 
-    
+
 
 ## What we did to access the device remotely
 

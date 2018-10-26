@@ -3,9 +3,9 @@
 1. Yaler for remote ssh access
 2. The Firmware (nodejs-firmware)
 
-## Adding a script at boot time for teh firmware (Yocto Linux)
+## Adding a script at boot time for the firmware (Yocto Linux)
 
-The folowing steps are needed for the Siemens device to run script at bootup
+The following steps are needed for the Siemens device to run script at boot-up
 
 ### Change to the directory /etc/init.d
 

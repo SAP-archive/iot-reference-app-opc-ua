@@ -10,21 +10,21 @@ The D-, I- or S-User IDs added as Members in the the Global Account are Administ
 
 In the Global Account Cockpit, Members Section we clicked the Add Members. A maximum number of 100 User Ids may be added
 
-## Subaccount Members in Cloud Foundry
+## Sub-account Members in Cloud Foundry
 
 ### Why ?
 
-By default only one user was automaticaly created with Organization Manager role. We need access as developers to create role collections for newly built apps.
+By default only one user was automatically created with Organisation Manager role. We need access as developers to create role collections for newly built apps.
 
 ### What we did
 
-All the users added in the Subaccount may be 'Organization Manager' or 'Organization Auditor' and the person , who received the account, also had to make every developer an administrator from a security point of view.
+All the users added in the Sub-account may be 'Organisation Manager' or 'Organisation Auditor' and the person , who received the account, also had to make every developer an administrator from a security point of view.
 
 ## Cloud Foundry Org/Space Members
 
 ### Why ?
 
-In Cloud Foundry users need access on Spaces with at least the developer role : 
+In Cloud Foundry users need access on Spaces with at least the developer role :
 
 * Space Developer
 
@@ -74,11 +74,11 @@ We've opened the IoT AE Thing Modeler -> Tenant Administration -> Persons and ad
 
 ### Why ?
 
-For collaboration, source code adn docs versions' history we needed a source control system.
-We choosed git because is easy to use and there are a lot of cloud providers to host git repositories.
+For collaboration, source code and documentation version history we needed a source control system.
+We chose git because is easy to use and there are a lot of cloud providers to host git repositories.
 
 ### What we did
 
-We created a GitHub Organization because we did not had one.
+We created a GitHub Organisation because we did not had one.
 We created a new repository for our source code and docs.
-We have added users to the Organization repository in GitHub as Owners and Members
+We have added users to the Organisation repository in GitHub as Owners and Members

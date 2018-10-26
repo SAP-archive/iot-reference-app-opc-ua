@@ -1,14 +1,14 @@
 ## Obtaining a Full Landscape ready for use by End Users
 
-We aquired all of the needed systems from within SAP folowing an internal process flow.
+We acquired all of the needed systems from within SAP following an internal process flow.
 
-For an external user, it will be different. 
+For an external user, it will be different.
 
 You need the following to get started:
 
 1. A cloud foundry global and sub-account
 2. An instance of SAP Cloud Platform IoT (Service) for cloud foundry
-3. An identity tenant from SAP Cloud identity (you might want o re-use your exisiting one used in your company and for other projects)
+3. An identity tenant from SAP Cloud identity (you might want o re-use your existing one used in your company and for other projects)
 4. A subscription to SAP IoT Application Enablement in your cloud foundry sub-account
 1. You need trust setup between your identity tenant and the cf sub account
 6. To use the web ide you also need a neo global account and a sub-account

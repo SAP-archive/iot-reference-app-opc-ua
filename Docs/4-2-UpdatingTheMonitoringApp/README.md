@@ -4,7 +4,7 @@ We saw, that the iot template is much better suited then the simple freestyle ap
 
 We first generated and tested a new app with the iot template.
 
-Then we followed the instructions at https://help.sap.com/viewer/86ce311577794701bae493bddd753aa3/1.52.0.0/en-US/72a9e86759184156b2c18997de00c752.html 
+Then we followed the instructions at https://help.sap.com/viewer/86ce311577794701bae493bddd753aa3/latest/en-US/72a9e86759184156b2c18997de00c752.html
 
 We cross-checked with the mta.yaml file we had created earlier.
 
@@ -14,8 +14,6 @@ And made sure we use the same xsuaa app name as in the past. This way we were ab
 
 We had to unbind the old app from the uaa service:
 
-	cf unbind-service KM KettleMonitor3-uaa
+	cf unbind-service KM KettleMonitor4-uaa
 
-then the new app could be deployed. We updated the user onboarding scripts accordingly.
-
-
+then the new app could be deployed. We updated the user on-boarding scripts accordingly.

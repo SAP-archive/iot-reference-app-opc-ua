@@ -13,8 +13,16 @@ If the siemens device is not responding to anything you might want to unplug the
 
 ## Dev Ops
 
+tbd
+
 ## First Deploy
+
+tbd
 
 ## Monitoring
 
+tbd, in particular the ingestion error log app and apis in iot application enblement might be useful.
+
 ## Upgrades
+
+tbd

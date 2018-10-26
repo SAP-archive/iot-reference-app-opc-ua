@@ -10,6 +10,6 @@ The following independent Node.Js app were custom developed
 
 4. node-firmware - custom firmware that runs on Siemens IoT 2040 device. It reads data from the 3 analog sensors with Intel MRAA library and send them to the OPC-UA server
 
-5. node-opc-ua-client-samples - Some text sample clients code. On the device (Yocto Linux) the version that uses async.series fails althought it work fine on other OSs
+5. node-opc-ua-client-samples - Some text sample clients code. On the device (Yocto Linux) the version that uses async.series fails although it work fine on other OSs
 
-6. node-event-generator - node app that monitors every 2 minutes the last 2 mnutes of data and checks, if maybe one phase is down
+6. node-event-generator - node app that monitors every 2 minutes the last 2 minutes of data and checks, if maybe one phase is down

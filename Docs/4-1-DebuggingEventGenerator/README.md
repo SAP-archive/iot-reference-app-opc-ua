@@ -4,9 +4,9 @@ We found an issue with the event generator that would show false positives. In b
 
 (False Positive Event)[falsepositiveevent.png]
 
-We assume, that this is to the fact, that for any 2 minute interval it might wel be that one phases is in average below 32 and one of the others is above 32. but only very slightly: 31.9 vs 32.1.
+We assume, that this is due to the fact, that for any 2 minute interval it might well be that one phases is in average below 32 and one of the others is above 32. but only very slightly: 31.9 vs 32.1.
 
-To remedy this we introdcued a minimum delta. of 10 amps. and changed the condition in the code from 
+To remedy this we introduced a minimum delta. of 10 amps. and changed the condition in the code from
 
     			if((thing.CurrentPhase1b_AVG > 32 || thing.CurrentPhase2b_AVG > 32 || thing.CurrentPhase3b_AVG > 32) &&
     				(thing.CurrentPhase1b_AVG < 32 || thing.CurrentPhase2b_AVG < 32 || thing.CurrentPhase3b_AVG < 32)) {
@@ -18,5 +18,4 @@ To remedy this we introdcued a minimum delta. of 10 amps. and changed the condit
 
 This should avoid this kind of problem in the future.
 
-To deploy the new version I used cf push. This way there was a short down time of the app but in this cases this is ok. 
-
+To deploy the new version I used cf push. This way there was a short down time of the app but in this cases this is ok.

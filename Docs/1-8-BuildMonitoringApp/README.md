@@ -8,10 +8,9 @@ https://github.com/SAP/cloud-cf-product-list-sample/tree/master/exercises/04_pus
 Building the App using Web IDE Full-Stack:
 https://www.sap.com/developer/tutorials/iotae-comp-buildappmc0.html
 
-We explored sharing our sources via our external Github in the Web IDE. For this to work, we had to put in the email address and user id in Github and the clone our git repository into the WEB IDE
-We encountered issues with authentication. This does not work probably due to our custom Identity Provider.
+We explored sharing our sources via our external Github in the Web IDE. For this to work, we had to put in the email address and user id in Github and the clone our git repository into the WEB IDE. We encountered issues with authentication. This does not work probably due to our custom Identity Provider. So we skipped this step.
 
-After that we tried the Github repository inside of Neo. This worked better and multiple developers could share and work on versions of the UI App in parrallel or to deploy the latest version on server. 
+After that we tried the Github repository inside of Neo. This worked better and multiple developers could share and work on versions of the UI App in parallel or to deploy the latest version on server.
 
 In the end we failed with this as it was unclear to some developers, what password was requested.
 
@@ -27,7 +26,7 @@ The next step was to create a new role collection and user group for the end use
 
 After this, we created a role-collection called "kettle_monitor" for users that are to use this Web App.
 
-We added the roles from KettelMonitor3!t1921:  KettelMonitor3_UI_Viewer to limit the rights for users of the app to only view stuff.
+We added the roles from KettelMonitor4!t1921:  KettelMonitor4_UI_Viewer to limit the rights for users of the app to only view stuff.
 
 In the SAP IoT Application Enablement capabilities app we first created a new capability "thing_read" which allows to read things unrestricted.
 
@@ -37,4 +36,4 @@ The next step was to create the user on-boarding script to allow to have a defin
 
 ## Implementation
 
-The source code is here: [Monitoring App](../UI5/KettelMonitor3).
+The source code is here: [Monitoring App](../../UI5/kettlemonitor4).

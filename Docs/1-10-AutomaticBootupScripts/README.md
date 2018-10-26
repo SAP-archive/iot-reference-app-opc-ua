@@ -1,13 +1,13 @@
 ## Why we need automatic boot-up scripts
 
-We have a custom Node.js middleware, the opc ua server and the Java IoT Edge Gateway that have to start automatic at boot as services if some power outage ocurs or a reboot is needed.
+We have a custom Node.js middleware, the opc ua server and the Java IoT Edge Gateway that have to start automatic at boot time as services if some power outage ocurs or a reboot is needed.
 
 ### On the Raspberry PI 3
 
     In this order scripts will start at boot :
 
     * OPC-UA server
-    * Custom midlleware
+    * Custom middleware
     * IoT Edge Gateway
 
     More info about creating scripts : [here](RaspberryPi3.md)

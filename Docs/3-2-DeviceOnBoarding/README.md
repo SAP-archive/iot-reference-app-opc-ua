@@ -1,13 +1,13 @@
 ## Device On-Boarding
 
-For a new device to be onboarded the following steps have to be taken:
+For a new device to be on-boarded the following steps have to be taken:
 
-- get Siemens 2020 or 2040 device 
+- get Siemens 2020 or 2040 device
 - get the Arduino shield for measuring currents, solder it together and install it in the Siemens device
 - get 3 current sensors and plug them into the first 3 slots
-- install Yocto Linux Image from https://support.industry.siemens.com/cs/document/109741799/simatic-iot2000-sd-card-example-image?dti=0&lc=en-WW , on a Mac follow these instructions from a helpful guide to generate an image using MacOS: https://matsab.de/index.php/de/heimautomatisierung/simatic-iot2040 
+- install Yocto Linux Image from https://support.industry.siemens.com/cs/document/109741799/simatic-iot2000-sd-card-example-image?dti=0&lc=en-WW , on a Mac follow these instructions from a helpful guide to generate an image using MacOS: https://matsab.de/index.php/de/heimautomatisierung/simatic-iot2040
 
-This was the generic part, noew this device can be used now or later for any measurement and with any server. This setup could be manufactured and provided by a service provider if required.
+This was the generic part, now this device can be used now or later for any measurement and with any server. This setup could be manufactured and provided by a service provider if required.
 
 Now for the actual on-boarding of this device as a specific device into our network, tied to a specific machine and tied to device and thing in OPC-UA and in SAP.
 
@@ -20,11 +20,11 @@ On OPC-UA server
 
 On device on Siemens IoT2020 hardware
 - use `iot2000setup` command to configure the device
-	- set the password to "Dev22ice" as described in the operations checklist
+	- set the password to "..." as described in the operations checklist
 - take note of the mac address in the operations checklist
 - whitelist mac address in SAP Guest network at https://nip.wdf.sap.corp/nip2/faces/networking/wlan/wlanManager/WlanMan.xhtml
 - ask SAP IT to fix the IP address
-- install Yaler support on the device using the process at [1-3-DeviceConfiguration](../1-3-DeviceConfiguration/Yocto-Linux_Autostart-Yaler.md) and use FileZilla to move the files over from a PC as the device does not have interenet access yet
+- install Yaler support on the device using the process at [1-3-DeviceConfiguration](../1-3-DeviceConfiguration/Yocto-Linux_Autostart-Yaler.md) and use FileZilla to move the files over from a PC as the device does not have internet access yet
 - the previous step also adds automatic reboot once and it also ensures that the time is set once a day
 - use `iot2000setup` to change the network to use dhcp
 - turn on device and connect it to the same network the OPC-UA Server is in, in our case SAP-Guest
@@ -32,7 +32,7 @@ On device on Siemens IoT2020 hardware
 
 On the OPC-UA server
 - edit app.js in the directory "node-opc-ua-server" and in the function post_initialize copy the lines from the first node "thecontroller51" to create your new device with e.g. the id kettle52
-- after hours (to not impcat current data collection) or based on the nightly reboot reboot the OPC-UA Server as a whole to restart the server with these new node definitions
+- after hours (to not impact current data collection) or based on the nightly reboot reboot the OPC-UA Server as a whole to restart the server with these new node definitions
 - run `opcua-commander` or use another OPC-UA Client to find out the internally assigned node ids for the node that is the kettle and for the nodes that are the 3 variables - take a note of these node ids
 
 On the Siemens device
@@ -40,7 +40,7 @@ On the Siemens device
 - install latest firmware version using the [install_firmware.md](install_firmware.md)
 - add automatic start-up for Firmware using this script [1-3-DeviceConfiguration](../3-1-AutomaticBootupScripts/SiemensIOT2000.md)
 - adjust Firmware with the 4 node ids of the device you got from the OPC-UA Server
-- configure ip address of the OPC-UA Server 
+- configure ip address of the OPC-UA Server
 --> data from device should be flowing and become visible on the OPC-UA Server, you can check this opc ua commander
 
 On OPC-UA server
@@ -57,10 +57,12 @@ In the SAP Cloud Platform IoT Service Cockpit
 In the middleware add the device with its id again to allow receiving of commands
 
 In SAP IoT Application Enablement launchpage
-- go to Thing Modeler and select package "kettle" and create new thing representign the new device iot2020_2_52 for thing type "thekettle"
+- go to Thing Modeler and select package "kettle" and create new thing representing the new device iot2020_2_52 for thing type "thekettle"
 - connect the new thing to the sensor you took note of in iot service cockpit
 - add the geolocation to the thing in the thing modeler
 --> data should be coming in - the latest data shows within the thing modeler
 
 In the monitoring app
-- check that data is coming in over time continously
+- check that data is coming in over time continuously
+
+Of course, if you do not onboard 10 but 10000 devices you have to automate all of the above.

@@ -1,4 +1,6 @@
-## List of all links used to access components in our landscape
+## List of all links used to access components in our landscape (your links will be different)
+
+UPDATE FALL 2018: For new customers and for tenants migrated to the service broker all of below tools and the application can all be accessed and launched from the cloud platform cockpit now (except the IDP). You will find neo and cf sub-accounts within a global account, web ide within the services in the neo account, thing modeler within the cf sub-account subscriptions and iot service cockpit within the cf sub-account in the dev space in the service instances. At the last point mentioned you will also find root password for iot service and client secret for iot application enablement.
 
 ### SCI Tenant IDP :
 https://refapps.accounts.ondemand.com/admin/

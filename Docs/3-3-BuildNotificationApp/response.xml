@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xml:base="https://analytics-thing-sap.cfapps.eu10.hana.ondemand.com:443/">
+  <id>
+https://analytics-thing-sap.cfapps.eu10.hana.ondemand.com:443/aggregates
+</id>
+  <title type="text">aggregates</title>
+  <updated>2018-03-07T16:59:18.773Z</updated>
+  <author>
+    <name/>
+  </author>
+  <link href="aggregates" rel="self" title="aggregates"/>
+  <entry>
+    <id>
+https://analytics-thing-sap.cfapps.eu10.hana.ondemand.com:443/aggregates('time%3D2018-02-08T10%3A11%3A00Z%2Cduration%3DALL%28T2M%29%2Cid%3D76757DFB166644E09BF8675271E6AA7D')
+</id>
+    <title type="text">aggregates</title>
+    <updated>2018-03-07T16:59:18.773Z</updated>
+    <category term="ref.apps.kettle.ConsumedPowerb_aggregates" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+    <link href="aggregates('time%3D2018-02-08T10%3A11%3A00Z%2Cduration%3DALL%28T2M%29%2Cid%3D76757DFB166644E09BF8675271E6AA7D')" rel="edit" title="ConsumedPowerb_aggregates"/>
+    <content type="application/xml">
+      <m:properties>
+        <d:id>76757DFB166644E09BF8675271E6AA7D</d:id>
+        <d:CurrentPhase3b_AVG>36.58880615234375</d:CurrentPhase3b_AVG>
+        <d:CurrentPhase2b_AVG>35.954315185546875</d:CurrentPhase2b_AVG>
+        <d:CurrentPhase1b_AVG>34.05085372924805</d:CurrentPhase1b_AVG>
+      </m:properties>
+    </content>
+  </entry>
+</feed>
