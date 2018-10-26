@@ -2,6 +2,8 @@
 
 This iot reference application is meant to make it simpler for you to build your own iot application. It walks you through all of the steps and provides you with all project documentation, configuration and source code required for you to be able to reproduce the application 1:1. We used the below phases to define the milestones for such an implementation project. The numbering of the phases is also reflected in the documentation folder names.
 
+We used cooking kettles at SAP as the example devices to be monitored and to help SAP facilities with the maintenance of these kettles. You can see 5 of them in below picture.
+
 ![all hardware pieces](Docs/2-1-DeployDeviceForProductionUse/IMG_1385%202.JPG)
 
 ## Project Phase 0 - Preparation

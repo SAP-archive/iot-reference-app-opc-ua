@@ -28,7 +28,7 @@ On device on Siemens IoT2020 hardware
 - the previous step also adds automatic reboot once and it also ensures that the time is set once a day
 - use `iot2000setup` to change the network to use dhcp
 - turn on device and connect it to the same network the OPC-UA Server is in, in our case SAP-Guest
---> now the device should be reachable via yaler based on the instructions at [0-5-LandscapeSetup](../0-5-LandscapeSetup/AccessSiemensAndRaspberryViaYaler.md)
+--> now the device should be reachable via yaler based on the instructions at [0-5-LandscapeSetup](../../0-5-LandscapeSetup/AccessSiemensAndRaspberryViaYaler.md)
 
 On the OPC-UA server
 - edit app.js in the directory "node-opc-ua-server" and in the function post_initialize copy the lines from the first node "thecontroller51" to create your new device with e.g. the id kettle52
@@ -38,7 +38,7 @@ On the OPC-UA server
 On the Siemens device
 - use Yaler access to find out the ip address of the device and take note of the ip address in our operations checklist file under Operations Process
 - install latest firmware version using the [install_firmware.md](install_firmware.md)
-- add automatic start-up for Firmware using this script [1-3-DeviceConfiguration](../3-1-AutomaticBootupScripts/SiemensIOT2000.md)
+- add automatic start-up for Firmware using this script [1-3-DeviceConfiguration](../../3-1-AutomaticBootupScripts/SiemensIOT2000.md)
 - adjust Firmware with the 4 node ids of the device you got from the OPC-UA Server
 - configure ip address of the OPC-UA Server
 --> data from device should be flowing and become visible on the OPC-UA Server, you can check this opc ua commander
