@@ -16,6 +16,6 @@ We were overwhelmed with all the sensors that were created for nodes that are no
 
 # MQTT
 
-1. The example provided is missing the sensorTypeAlternateId which is mandatory for ingesting data in more complex scenarios where you create your own sensor types (and not just Temperature).
+1. The example provided was missing the sensorTypeAlternateId which is important for ingesting data in more complex scenarios where you create your own sensor types (and do not use the built-in ones like Temperature). (Edit: in the meantime this has been updated and a good illustration is available at https://help.sap.com/viewer/c2717aff5c194576a9dd19d4cabef0ad/Cloud/en-US/9834838f97a0423dbd23829962140073.html)
 
 In the end we understood: The OPC UA Node Classes are all turned into “Sensors” in IoT Edge Gateway. this design did not match our expectations and made integration with IoT Application Enablement difficult. The hierarchical (and apparently other) information from the OPC UA model is according to developers not lost, yet the APIs needed to get to this information are not yet available.
