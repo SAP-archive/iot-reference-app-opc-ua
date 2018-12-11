@@ -12,7 +12,7 @@ We were overwhelmed with all the sensors that were created for nodes that are no
 
 6. If the gateway fails to load the OP-UA server configuration, the gateway hangs-up and does not try another time as fail-over?
 
-7. It takes to long for the gateway to attach on the JMS Broker (JMSConnectionManagerImpl line 168) ?
+7. It took long for the gateway to attach to the JMS Broker (JMSConnectionManagerImpl line 168). (Edit: this might have been caused by the random number generation required for the security initialization. On some JVMs and Platforms this takes longer then on others.)
 
 # MQTT
 
